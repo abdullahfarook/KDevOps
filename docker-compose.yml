@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   kohsaar.api:
-    image: 'abdullahgb/eshop.api:latest'
+    image: 'abdullahgb/kohsaar.api:latest'
     container_name: kohsaar_api
     ports:
       - '5001:5000'

@@ -2,10 +2,10 @@ version: '3.4'
 services:
   kohsaar.api:
     volumes:
-      - 'c:/${ATTACH_DISK}/Kohsaar.Api/wwwroot:/usr/app/wwwroot/'
+      - 'c:/${ATTACH_DISK}/kohsaar/wwwroot:/usr/app/wwwroot/'
     environment:
       - 'ASPNETCORE_ENVIRONMENT=Sandbox'
-      - 'ConnectionString=server=db;port=3306;database=kohsaardb;userid=sa;password=${DB_PASSWORD};'
+      - 'ConnectionString=server=mysql;port=3306;database=kohsaardb;userid=sa;password=${DB_PASSWORD};'
     build: 
-      context: ../../Kohsaar.Api.Api/Kohsaars
-      dockerfile: ./Dockerfile.original
+      context: ../Kohsaar.Api
+      dockerfile: ./Kohsaar/Dockerfile.original
