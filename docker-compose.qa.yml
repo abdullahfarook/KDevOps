@@ -5,4 +5,5 @@ services:
       - '/${ATTACH_DISK}/app/kohsaar/wwwroot:/usr/app/wwwroot/'
     environment:
       - 'ASPNETCORE_ENVIRONMENT=Production'
-      - 'ConnectionString=server=mysql;port=3306;database=kohsaardb;userid=sa;password=${DB_PASSWORD};'
+      - 'ASPNETCORE_URLS=http://0.0.0.0:5100'
+      - 'ConnectionString=server=mysql;port=3306;database=kohsaardb;userid=root;password=${DB_PASSWORD};'
