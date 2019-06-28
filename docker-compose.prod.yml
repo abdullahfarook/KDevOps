@@ -3,6 +3,3 @@ services:
   kohsaar.api:
     volumes:
       - '/${ATTACH_DISK}/app/kohsaar/wwwroot:/usr/app/wwwroot/'
-    environment:
-      - 'ASPNETCORE_ENVIRONMENT=Production'
-      - 'ConnectionString=server=mysql;port=3306;database=kohsaardb;userid=sa;password=${DB_PASSWORD};'
