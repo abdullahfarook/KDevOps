@@ -5,7 +5,6 @@ services:
       - 'c:/${ATTACH_DISK}/kohsaar/wwwroot:/usr/app/wwwroot/'
     environment:
       - 'ASPNETCORE_ENVIRONMENT=Sandbox'
-      - 'ConnectionString=server=mysql;port=3306;database=kohsaardb;userid=sa;password=${DB_PASSWORD};'
     build: 
       context: ../Kohsaar.Api
       dockerfile: ./Kohsaar/Dockerfile.original

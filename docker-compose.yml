@@ -3,8 +3,12 @@ services:
   kohsaar.api:
     image: 'abdullahgb/kohsaar.api:latest'
     container_name: kohsaar_api
+    environment:
+      - 'ASPNETCORE_ENVIRONMENT=Production'
+      - 'ASPNETCORE_URLS=http://0.0.0.0:5000'
+      - 'ConnectionString=server=mysql;port=3306;database=kohsaardb;userid=root;password=${DB_PASSWORD};'
     ports:
-      - '5001:5000'
+      - '5100:5000'
     restart: always
     networks:
       - proxynet
